@@ -18,7 +18,7 @@ body {
 }
 
 header.masthead {
-  background: url('../img/kitty1.jpg') no-repeat center center scroll;
+  background: url('../img/copy-1.png') no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -41,7 +41,7 @@ header.masthead>.overlay {
 }
 
 .navbar {
-  background-color: #435171;
+  background-color: #d8a169
 }
 .navbar .navbar-brand {
   color: #ffffff;

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE>
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="img/1.png" alt="CoolAdn"></img>
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="dashboard.html">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Projects</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="create.html">Create</a>
+                                </li>
+                                <li>
+                                    <a href="manage.html">Manage</a>
+                                </li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR
+        
+        User Table
+        Dog Table
+        Settings Table
+            
+        -->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="dashboard.html">
+                    <img src="img/puppy-pals-logo.png" alt="Puppy Pals" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="dashboard.html">
+                                    <i class="fas fa-newspaper"></i>What's New?</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="doggo-profile.html">
+                                    <i class="fas fa-paw"></i>Doggo Profile</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                                <a class="js-arrow" href="help.html">
+                                    <i class="far fa-question-circle"></i>Help</a>
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                </ul>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST"></form>
+                            <div class="header-button">
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <!-- Have the name and last name show here taken from the database-->
+                                        <div class="content">
+                                            <a class="js-acc-btn">Patrick Smith</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                     <!-- Default Pic, for now, we are not focusing on adding a picture but this is just a default.-->
+                                                    <a>
+                                                        <img src="img/defaul-profile.png" alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <!-- Have the name and last name show here taken from the database-->
+                                                    <!-- Have the email show here taken from the database-->
+                                                    <h5 class="name">
+                                                        <a>Patrick Smith</a>
+                                                    </h5>
+                                                    <span class="email">patrick.smith@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="account.html">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="settings.html">
+                                                        <i class="zmdi zmdi-settings"></i>Settings</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+             <!-- MAIN CONTENT-->
+             <div class="main-content">
+                    <div class="section__content section__content--p30">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="overview-wrap">
+                                         <h2 class="title-1">What's new?<br><br></h2>
+                                                <!--button class="au-btn au-btn-icon au-btn--blue">
+                                                    <i class="zmdi zmdi-plus"></i>add ite</button-->
+                                    </div>
+                                    <div class="overview-wrap">
+                                            <h2 class="title-small">Tips of the Week<br><br></h2>
+                                                   <!--button class="au-btn au-btn-icon au-btn--blue">
+                                                       <i class="zmdi zmdi-plus"></i>add ite</button-->
+                                       </div>
+                                </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/doggo.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title mb-3">I want to take a walk!</h4>
+                                            <p class="card-text">Walking your Buddy (or Spot or Fido) is so much more 
+                                                than just a way of exercising man’s best friend. It stops him or her
+                                                 from getting bored, it’s a behavior training opportunity, and it teaches
+                                                  your dog how to behave in canine company. On top of all this, it gets both
+                                                   of you out and about while helping to grow the bond you have with your dog.
+                                                   A sedentary pooch can quickly become an overweight one, and that brings
+                                                    all sorts of potential health problems with it.
+                                                    Even if your dog is active inside the home, they still need another outlet for pent-up energy. So, take your doggo
+                                                    for a walk!
+                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="img/dog_eating.jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h4 class="card-title mb-3">Get your doggo the BEST FOOD</h4>
+                                                <p class="card-text">Most products have meat, grains, vegetables, fruit, and vitamins. 
+                                                    The American College of Veterinary Nutrition says commercial foods are safe and
+                                                     healthful options for feeding pets.
+                                                    Be sure to pick the food that’s right for your dog’s stage of life -- puppy,
+                                                     pregnant or nursing, or adult. There are also foods that are approved for all stages.
+                                                     Always check the package for a statement from the Association of American Feed Control Officials
+                                                      (AAFCO) that the food is “complete and balanced!” 
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                        <div class="card">
+                                            <img class="card-img-top" src="img/dogs-playing.jpg" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h4 class="card-title mb-3">Let's play with other hoomans!</h4>
+                                                    <p class="card-text">Have you noticed how many people you meet at the dog park or 
+                                                        at a dog-friendly location versus how many you meet at home playing Rock Band
+                                                         by yourself? The pizza delivery guy doesn’t count, even if he likes your dog.
+                                                        In case you don’t know this already, dog people are the best. Who else can you talk to about your
+                                                         dog’s adorable poop-eating habit and have everyone in the room commiserate
+                                                          with you rather than vomit on your shoes? You can never have too many dog people in your life.
+                                                    </p>
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                            <div class="overview-wrap">
+                                                    <h2 class="title-small">Resources and Love for your Doggo!<br><br></h2>
+                                                           <!--button class="au-btn au-btn-icon au-btn--blue">
+                                                               <i class="zmdi zmdi-plus"></i>add ite</button-->
+                                               </div>
+                                        </div>   
+                                    <div class="col-md-4">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <strong class="card-title">Training & Behavior: Dog Aggression</strong>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">Dog aggression is normal canine behavior. In the wild, dogs
+                                                         use aggressive behavior to hunt for food, to defend themselves, and to guard 
+                                                         their territory. Dogs use aggression to intimidate or harm, but most of the
+                                                          time, dogs threaten aggression without needing to follow through. The reason
+                                                        is that dogs who are properly socialized understand and respect the pack hierarchy. <br>
+                                                        Read more <a target="_blank" href="https://resources.bestfriends.org/article/dog-aggression?_ga=2.258552330.1853502374.1553656457-208167121.1553656457">here</a>.<br> <strong>Brought to you by Bestfriends.org</strong>
+                                                    </p>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    
+                                    <div class="col-md-4">
+                                            <div class="card bg-danger">
+                                                <div class="card-body">
+                                                    <blockquote class="blockquote mb-0">
+                                                        <p class="text-light">A dog is the only thing on earth that loves you more than he loves himself.</p>
+                                                        <footer class="blockquote-footer text-light">By
+                                                            <cite title="Source Title">Josh Billings</cite>
+                                                        </footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                            <div class="card bg-primary">
+                                                    <div class="card-body">
+                                                        <blockquote class="blockquote mb-0">
+                                                            <p class="text-light">Money can buy you a fine dog, but only love can make him wag his tail.</p>
+                                                            <footer class="blockquote-footer text-light">By
+                                                                <cite title="Source Title">Kinky Friedman</cite>
+                                                            </footer>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                        </div>
+
+                                        
+                                        <div class="col-md-4">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <strong class="card-title">For Adopters: How to Introduce a Dog to a Cat</strong>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <p class="card-text">Some dogs do fine living with cats; others simply cannot live safely
+                                                             with felines. Sometimes, a dog can live with certain cats (depending on their age,
+                                                              temperament and activity level), but not others. Even if your dog has successfully 
+                                                              lived with cats in the past, it is important to remember that each dog and each cat
+                                                               is an individual and therefore each introduction is different.<br>
+                                                            Read more <a target="_blank" href="https://resources.bestfriends.org/article/how-introduce-dog-cat?_ga=2.146510132.1853502374.1553656457-208167121.1553656457">here</a>.<br> <strong>Brought to you by Bestfriends.org</strong>
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                    
+                                        
+                            
+                            <!--div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong class="card-title mb-3">Profile Card</strong>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mx-auto d-block">
+                                                <img class="rounded-circle mx-auto d-block" src="img/icon/avatar-01.jpg" alt="Card image cap">
+                                                <h5 class="text-sm-center mt-2 mb-1">Patrick Smith</h5>
+                                                <div class="location text-sm-center">
+                                                    <i class="fa fa-map-marker"></i> California, United States</div>
+                                            </div>
+                                            <hr>
+                                            <div class="card-text text-sm-center">
+                                                <a href="#">
+                                                    <i class="fa fa-facebook pr-1"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fa fa-twitter pr-1"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fa fa-linkedin pr-1"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="fa fa-pinterest pr-1"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                             </div-->
+
+                            <!--div class="col-md-6">
+                             <div class="card">
+									<div class="card-header">
+										<h4>My Projects</h4>
+									</div>
+									<div class="card-body">
+										<p class="muted">Completition of current projects as a leader:</p>
+										<div class="progress mb-2">
+											<div class="progress-bar bg-success" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
+										</div>
+										<div class="progress mb-2">
+											<div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+										</div>
+										<div class="progress mb-2">
+											<div class="progress-bar bg-warning" role="progressbar" style="width: 77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">77%</div>
+										</div>
+										<div class="progress mb-2">
+											<div class="progress-bar bg-primary" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">84%</div>
+                                        </div>
+                                        <div class="progress mb-2">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">97%</div>
+                                            </div>
+									</div>
+                                </div>
+                            </div-->
+								<!-- /# card -->
+
+                             
+                                    <!--div class="col-lg-6">
+                                        <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+                                            <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
+                                                <div class="bg-overlay bg-overlay--blue"></div>
+                                                <h3>
+                                                    <i class="zmdi zmdi-account-calendar"></i>January 20, 2019</h3>
+                                                <button class="au-btn-plus">
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="au-task js-list-load">
+                                                <div class="au-task__title">
+                                                    <p>Tasks for Patrick Smith</p>
+                                                </div>
+                                                <div class="au-task-list js-scrollbar3">
+                                                    <div class="au-task__item au-task__item--danger">
+                                                        <div class="au-task__item-inner">
+                                                            <h5 class="task">
+                                                                <a href="#">Meeting about planning for the Bixby project</a>
+                                                            </h5>
+                                                            <span class="time">10:00 AM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="au-task__item au-task__item--warning">
+                                                        <div class="au-task__item-inner">
+                                                            <h5 class="task">
+                                                                <a href="#">Meeting with Jhon</a>
+                                                            </h5>
+                                                            <span class="time">11:00 AM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="au-task__item au-task__item--primary">
+                                                        <div class="au-task__item-inner">
+                                                            <h5 class="task">
+                                                                <a href="#">Attend Robotics meeting</a>
+                                                            </h5>
+                                                            <span class="time">02:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="au-task__item au-task__item--success">
+                                                        <div class="au-task__item-inner">
+                                                            <h5 class="task">
+                                                                <a href="#">Dinner with CIO</a>
+                                                            </h5>
+                                                            <span class="time">03:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="au-task__item au-task__item--danger js-load-item">
+                                                        <div class="au-task__item-inner">
+                                                            <h5 class="task">
+                                                                <a href="#">Workshop: Understanding AI</a>
+                                                            </h5>
+                                                            <span class="time">5:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="au-task__item au-task__item--warning js-load-item">
+                                                        <div class="au-task__item-inner">
+                                                            <h5 class="task">
+                                                                <a href="#">Planning the process</a>
+                                                            </h5>
+                                                            <span class="time">7:00 PM</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="au-task__footer">
+                                                    <button class="au-btn au-btn-load js-load-btn">load more</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div-->
+                    </div>
+            </div>
+            <!-- END PAGE CONTAINER-->
+    
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
