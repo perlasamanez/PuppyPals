@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE>
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="img/1.png" alt="CoolAdn"></img>
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="dashboard.html">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Projects</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="create.html">Create</a>
+                                </li>
+                                <li>
+                                    <a href="manage.html">Manage</a>
+                                </li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR
+        
+        User Table
+        Dog Table
+        Settings Table
+            
+        -->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="dashboard.html">
+                    <img src="img/puppy-pals-logo.png" alt="Puppy Pals" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="dashboard.html">
+                                    <i class="fas fa-newspaper"></i>What's New?</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="doggo-profile.html">
+                                    <i class="fas fa-paw"></i>Doggo Profile</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            </ul>
+                        </li>
+                        <li class="active has-sub">
+                                <a class="js-arrow" href="help.html">
+                                    <i class="far fa-question-circle"></i>Help</a>
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                </ul>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST"></form>
+                            <div class="header-button">
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <!-- Have the name and last name show here taken from the database-->
+                                        <div class="content">
+                                            <a class="js-acc-btn">Patrick Smith</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                     <!-- Default Pic, for now, we are not focusing on adding a picture but this is just a default.-->
+                                                    <a>
+                                                        <img src="img/defaul-profile.png" alt="" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <!-- Have the name and last name show here taken from the database-->
+                                                    <!-- Have the email show here taken from the database-->
+                                                    <h5 class="name">
+                                                        <a>Patrick Smith</a>
+                                                    </h5>
+                                                    <span class="email">patrick.smith@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="account.html">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="settings.html">
+                                                        <i class="zmdi zmdi-settings"></i>Settings</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+             <!-- MAIN CONTENT-->
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="overview-wrap">
+                        <h2 class="title-1">Settings<br><br></h2>
+                                                <!--button class="au-btn au-btn-icon au-btn--blue">
+                                                    <i class="zmdi zmdi-plus"></i>add ite</button-->
+                    </div>
+                </div>               
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Mange Your</strong> Settings
+                        </div>
+                        <div class="card-body card-block">
+                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label class=" form-control-label">Size Preference</label>
+                                    </div>
+                                    <div class="col col-md-9">
+                                        <div class="form-check">
+                                            <div class="radio">
+                                                <label for="radio1" class="form-check-label ">
+                                                    <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Small
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio2" class="form-check-label ">
+                                                    <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Medium
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio2" class="form-check-label ">
+                                                    <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Large
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label class=" form-control-label">Gender Preference</label>
+                                    </div>
+                                    <div class="col col-md-9">
+                                        <div class="form-check">
+                                            <div class="radio">
+                                                <label for="radio1" class="form-check-label ">
+                                                    <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Female
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="radio2" class="form-check-label ">
+                                                    <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Male
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="select" class=" form-control-label">Distance Preference<br>(Within # Miles)</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="select" id="select" class="form-control">
+                                            <option value="0">Please select</option>
+                                            <option value="1">0</option>
+                                            <option value="2">5</option>
+                                            <option value="3">10</option>
+                                            <option value="4">15</option>
+                                            <option value="5">20</option>
+                                            <option value="6">25</option>
+                                            <option value="7">30</option>
+                                            <option value="8">50</option>
+                                            <option value="9">100</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fa fa-dot-circle-o"></i> Submit
+                            </button>
+                            <button type="reset" class="btn btn-secondary btn-sm">
+                                <i class="fa fa-ban"></i> Edit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">Add info explaining </strong>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">HERE small medium etc is blah Some dogs do fine living with cats; others simply cannot live safely
+                                    with felines. Sometimes, a dog can live with certain cats (depending on their age,
+                                    temperament and activity level), but not others. Even if your dog has successfully 
+                                    lived with cats in the past, it is important to remember that each dog and each cat
+                                    is an individual and therefore each introduction is different.<br>
+                                    Read more <a target="_blank" href="https://resources.bestfriends.org/article/how-introduce-dog-cat?_ga=2.146510132.1853502374.1553656457-208167121.1553656457">here</a>.<br> <strong>Brought to you by Bestfriends.org</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE CONTAINER-->
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
