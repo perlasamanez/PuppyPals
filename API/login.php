@@ -16,11 +16,11 @@
     }
     else
     {
-		$salted = "alk3245jylj345j345g34fg6532l1".$password."lksdfjklerwwej23g42g34g234g32";
+		#$salted = "alk3245jylj345j345g34fg6532l1".$password."lksdfjklerwwej23g42g34g234g32";
 
-		$hashed = hash('sha512', $salted);
+		#$hashed = hash('sha512', $salted);
         
-		$sql = "SELECT userID FROM user where username ='" . $username . "' and password ='" . $hashed . "'";
+		$sql = "SELECT userID FROM user where username ='" . $username . "' and password ='" . $password . "'";
 
         $result = $conn->query($sql);
         if($result->num_rows > 0)
