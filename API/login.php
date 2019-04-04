@@ -10,6 +10,7 @@
 	$password = $inData["password"];
     
     $conn = new mysqli("localhost", "poopspg2_user_pp", "FYPykYr~@7T!", "poopspg2_PuppyPals");
+
     if($conn->connect_error)
     {
         returnWithError( $conn->connect_error );
@@ -20,7 +21,7 @@
 
 		#$hashed = hash('sha512', $salted);
         
-		$sql = "SELECT userID FROM user where username ='" . $username . "' and password ='" . $password . "'";
+		$sql = "select userID from user where username ='" . $username . "' and password ='" . $password . "'";
 
         $result = $conn->query($sql);
         if($result->num_rows > 0)
