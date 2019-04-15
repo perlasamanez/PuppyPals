@@ -4,11 +4,11 @@
     
     //extract data
     $userID = $inData["userID"];
-
+    
     //return data
     $results = "";
     $dogCount = 0;
-
+    
     //establish connection to remote database
     $conn = new mysqli("localhost", "poopspg2_user_pp", "FYPykYr~@7T!", "poopspg2_PuppyPals");
     
@@ -24,7 +24,7 @@
         $genderSeeking = "Both";
         $radiusSeeking = 10;
         $sizeSeeking = 1;
-
+        
         $sql = "SELECT sizeSeeking,radiusSeeking,genderSeeking FROM settings where userID=" . $userID;
         $settings_query = $conn->query($sql);
         if($settings_query->num_rows>0)
@@ -34,18 +34,18 @@
             $radiusSeeking = $settings["radiusSeeking"];
             $sizeSeeking = $settings["sizeSeeking"];
         }
-
+        
         //generate a pool of potential matches
         if($genderSeeking != "Both")
         {
             $sql = "SELECT user.userID, dog.dName, dog.size, dog.breed, dog.age, dog.bio, dog.gender FROM user INNER JOIN dog ON user.userID=dog.userID AND dog.gender='" . $genderSeeking . "' AND dog.size=" . $sizeSeeking . " AND user.userID<>" . $userID;
         }
-        else 
+        else
         {
             $sql = "SELECT user.userID, dog.dName, dog.size, dog.breed, dog.age, dog.bio, dog.gender FROM user INNER JOIN dog ON user.userID=dog.userID AND dog.size=" . $sizeSeeking . " AND user.userID<>" . $userID;
         }
         $dogs_query = $conn->query($sql);
-
+        
         if($dogs_query->num_rows > 0)
         {
             //loop until out of dogs or 5 dogs found
@@ -54,8 +54,8 @@
                 {
                     break;
                 }
-
-				//get dog information
+                
+                //get dog information
                 $otherID = $dog["userID"];
                 $dName = $dog["dName"];
                 $size = $dog["size"];
@@ -63,17 +63,18 @@
                 $age = $dog["age"];
                 $bio = $dog["bio"];
                 $gender = $dog["gender"];
-
+                $imgDog = $dog["imgDog"];
+                
                 //check that the user has not liked this dog before
                 $sql = "SELECT userID FROM likes WHERE userID=" . $userID . " AND other=" . $otherID;
                 $like_check = $conn->query($sql);
-
+                
                 if($like_check->num_rows > 0)
                 {
                     //this dog have been liked before, continue
                     continue;
                 }
-
+                
                 //dog have not been liked before
                 //add to JSON object containing results
                 if($dogCount > 0)
@@ -81,9 +82,9 @@
                     $results .= ",";
                 }
                 $dogCount++;
-                $results .= '[' . $otherID . ',"' . $dName . '",' . $size . ',"' . $breed . '",' . $age . ',"' . $bio . '","' . $gender . '"]';
+                $results .= '{' . $otherID . ',"' . $dName . '",' . $size . ',"' . $breed . '",' . $age . ',"' . $bio . '","' . $gender . '","' . $imgDog . '"}';
             }
-
+            
             
             $conn->close();
             
@@ -124,4 +125,5 @@
         sendResultInfoAsJson( $retValue );
     }
     
-?>
+    ?>
+
