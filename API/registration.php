@@ -8,6 +8,7 @@
 	$email = $inData["email"];
     $password = $inData["password"];
 	$password2 = $inData["password2"];
+    $matchMessage = $inData["matchMessage"];
 
 	$conn = new mysqli("localhost", "poopspg2_user_pp", "FYPykYr~@7T!", "poopspg2_PuppyPals");
 
@@ -32,14 +33,19 @@
 
 				$hashed = hash('sha512', $salted);
 
-		        $sql = "insert into user (firstName, lastName, email, username, password) VALUES ('" . $firstName . "','" . $lastName . "', '" . $email . "', '" . $username . "','" . $hashed . "')";
+		        $sql = "insert into user (firstName, lastName, email, username, password, matchMessage) VALUES ('" . $firstName . "','" . $lastName . "', '" . $email . "', '" . $username . "','" . $hashed . "'," . '"' . $matchMessage . '"' . ")";
 		        if( $result = $conn->query($sql) != TRUE )
 		        {
 		            returnWithError( $conn->error );
 		        }
 		        else
 		        {
-		            returnWithError("");
+                    $sql = "SELECT userID FROM user WHERE email='" . $email . "'";
+                    $userID_query = $conn->query($sql);
+                    $userID_result = $userID_query->fetch_assoc();
+                    $userID = $userID_result["userID"];
+                    
+                    returnWithInfo($userID);
 		        }
 			
 			}
@@ -67,4 +73,9 @@
 		$retValue = '{"error":"' . $err . '"}';
 		sendResultInfoAsJson( $retValue );
 	}
+    function returnWithInfo($id)
+    {
+        $retValue = '{"userID":' . $id  . ',"error":""}';
+        sendResultInfoAsJson( $retValue );
+    }
 ?>
