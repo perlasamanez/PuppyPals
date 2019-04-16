@@ -4,11 +4,28 @@
     
     //extract data
     $userID = $inData["userID"];
+    
+    //user data
     $firstName = $inData["firstName"];
     $lastName = $inData["lastName"];
     $username = $inData["username"];
     $password = $inData["password"];
     $email = $inData["email"];
+    $matchMessage = $inData["matchMessage"];
+    
+    //dog data
+    $age = $inData["age"];
+    $bio = $inData["bio"];
+    $breed = $inData["breed"];
+    $dName= $inData["dName"];
+    $gender = $inData["gender"];
+    $imgDog = $inData["imgDog"];
+    $size = $inData["size"];
+    
+    //settings data
+    $genderSeeking = $inData["genderSeeking"];
+    $radiusSeeking = $inData["radiusSeeking"];
+    $sizeSeeking = $inData["sizeSeeking"];
 
     //establish connection to remote database
     $conn = new mysqli("localhost", "poopspg2_user_pp", "FYPykYr~@7T!", "poopspg2_PuppyPals");
@@ -26,19 +43,42 @@
         $hashed = hash('sha512', $salted);
 
         //update the info in the database
-        $sql = "UPDATE user SET firstName='" . $firstName . "', lastName='" . $lastName . "', username='" . $username . "', password='" . $hashed . "', email='" . $email . "' WHERE userID=" . $userID;
+        $sql = "UPDATE user SET firstName='" . $firstName . "', lastName='" . $lastName . "', username='" . $username . "', password='" . $hashed . "', email='" . $email . "', matchMessage=" . '"' . $matchMessage . '"' . " WHERE userID=" . $userID;
 
         if($update_query = $conn->query($sql))
-        {   
-            $conn->close();
+        {
+            $sql = "UPDATE dog SET age='" . $age . "', bio=" . '"' . $bio . '"' . ", breed='" . $breed . "', dName='" . $dName . "', gender='" . $gender . "', imgDog='" . $imgDog. "', size='" . $size. "' WHERE userID=" . $userID;
             
-            returnWithInfo(1);
+            if($update_query = $conn->query($sql))
+            {
+                
+                $sql = "UPDATE settings SET genderSeeking='" . $genderSeeking . "', radiusSeeking='" . $radiusSeeking. "', sizeSeeking='" . $sizeSeeking . "' WHERE userID=" . $userID;
+                
+                if($update_query = $conn->query($sql))
+                {
+                    $conn->close();
+                    
+                    returnWithInfo(1);
+                }
+                else
+                {
+                    $conn->close();
+                    
+                    returnWithError( "Error updating settings table" );
+                }
+            }
+            else
+            {
+                $conn->close();
+                
+                returnWithError( "Error updating dog table" );
+            }
         }
         else
         {
             $conn->close();
             
-            returnWithError( "No User Found to Update" );
+            returnWithError( "Error updating user table" );
         }
     }
     
