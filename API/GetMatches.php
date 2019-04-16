@@ -35,15 +35,17 @@
 
                 //fetch additional information from the database
                 //get human name and dog name
-                $sql = "SELECT firstName FROM user WHERE userID=" . $otherID;
+                $sql = "SELECT firstName,matchMessage FROM user WHERE userID=" . $otherID;
                 $name_query = $conn->query($sql);
                 $name = $name_query->fetch_assoc();
                 $humanName = $name["firstName"];
+                $matchMessage = $name["matchMessage"];
 
-				$sql = "SELECT dName FROM dog WHERE userID=" . $otherID;
+				$sql = "SELECT dName,imgDog FROM dog WHERE userID=" . $otherID;
                 $name_query = $conn->query($sql);
                 $name = $name_query->fetch_assoc();
                 $dogName = $name["dName"];
+                $imgDog = $name["imgDog"];
 
                 //add to JSON object containing results
                 if(matchCount > 0)
@@ -51,7 +53,7 @@
                     $matchResults .= ",";
                 }
                 $matchCount++;
-                $matchResults .= '[' . $matchID . ',' . $otherID . ',"' . $humanName . '","' . $dogName . '"]';
+                $matchResults .= '{' . $otherID . ',"' . $humanName . '","' . $dogName . '","' . $matchMessage . '","' . $imgDog . '"}';
             }
 
             
