@@ -82,7 +82,7 @@
                     $results .= ",";
                 }
                 $dogCount++;
-                $results .= '{' . $otherID . ',"' . $dName . '",' . $size . ',"' . $breed . '",' . $age . ',"' . $bio . '","' . $gender . '","' . $imgDog . '"}';
+                $results .= '{' . $otherID . ',"' . $dName . '",' . $size . ',"' . $breed . '","' . $age . '","' . $bio . '","' . $gender . '","' . $imgDog . '"}';
             }
             
             
