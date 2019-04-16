@@ -38,11 +38,11 @@
         //generate a pool of potential matches
         if($genderSeeking != "Both")
         {
-            $sql = "SELECT user.userID, dog.dName, dog.size, dog.breed, dog.age, dog.bio, dog.gender FROM user INNER JOIN dog ON user.userID=dog.userID AND dog.gender='" . $genderSeeking . "' AND dog.size=" . $sizeSeeking . " AND user.userID<>" . $userID;
+            $sql = "SELECT user.userID, dog.dName, dog.size, dog.breed, dog.age, dog.bio, dog.gender,dog.imgDog FROM user INNER JOIN dog ON user.userID=dog.userID AND dog.gender='" . $genderSeeking . "' AND dog.size=" . $sizeSeeking . " AND user.userID<>" . $userID;
         }
         else
         {
-            $sql = "SELECT user.userID, dog.dName, dog.size, dog.breed, dog.age, dog.bio, dog.gender FROM user INNER JOIN dog ON user.userID=dog.userID AND dog.size=" . $sizeSeeking . " AND user.userID<>" . $userID;
+            $sql = "SELECT user.userID, dog.dName, dog.size, dog.breed, dog.age, dog.bio, dog.gender,dog.imgDog FROM user INNER JOIN dog ON user.userID=dog.userID AND dog.size=" . $sizeSeeking . " AND user.userID<>" . $userID;
         }
         $dogs_query = $conn->query($sql);
         
