@@ -329,7 +329,8 @@ section {
 }
 
 .page-content--bge5 {
-    background: #e5e5e5;
+    /*background: #ffd9b7;*/
+    background-image: linear-gradient(to bottom, yellow, red);
     height: 100vh;
 }
 /* 540 - 30 ox */
@@ -337,6 +338,16 @@ section {
     max-width: 540px;
     padding-top: 8vh;
     margin: 0 auto;
+}
+
+.grad {
+    background-image: linear-gradient(to bottom, #ffd4aa, #e2e2e2);
+    padding-top: 5px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .register-wrap {

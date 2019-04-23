@@ -41,7 +41,11 @@ header.masthead>.overlay {
 }
 
 .navbar {
-  background-color: #d8a169
+  /*background-color: #d8a169*/
+  /*background-color: gba(0,0,0,0.3);*/
+  background-color: rgba(0,0,0,0);
+  height: 40px;
+  width:auto;
 }
 .navbar .navbar-brand {
   color: #ffffff;
